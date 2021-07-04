@@ -180,26 +180,26 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 else {
                     await conn.sendMessage(conn.user.jid, '*welcome to X-Troid*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using X-Troid💌*', MessageType.text);
 
-                    await git.fetch();
-                    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                    if (commits.total === 0) {
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            Lang.UPDATE, MessageType.text
-                        );    
-                    } else {
-                        var degisiklikler = Lang.NEW_UPDATE;
-                        commits['all'].map(
-                            (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
-                            }
-                        );
+//                     await git.fetch();
+//                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+//                     if (commits.total === 0) {
+//                         await conn.sendMessage(
+//                             conn.user.jid,
+//                             Lang.UPDATE, MessageType.text
+//                         );    
+//                     } else {
+//                         var degisiklikler = Lang.NEW_UPDATE;
+//                         commits['all'].map(
+//                             (commit) => {
+//                                 degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
+//                             }
+//                         );
         
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
-                        ); 
-                    }
+//                         await conn.sendMessage(
+//                             conn.user.jid,
+//                             '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
+//                         ); 
+//                     }
                 }
             }
             else {
