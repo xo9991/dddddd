@@ -46,7 +46,7 @@ module.exports = {
     DATABASE: DATABASE_URL === './whatsasena.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
     RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
     LOGO_KEY: process.env.LOGOAPI === undefined ?'B6FlBogm1ELO1Z52WigX70G1TOe' : process.env.LOGOAPI,
-    CAPTION_KEY: process.env.CP === undefined ?'🚀Made by X-Troid ☄️' : process.env.CP,
+    CAPTION_KEY: process.env.CP === undefined ?'🚀Made by X-Troid ☄️\nModified Me' : process.env.CP,
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
